@@ -15,7 +15,8 @@ None. DOH!
 * Easy project initialization.
 * Streamlined authoring of Matrix design parse files.
 * Concise syntax for MySource specific code blocks.
-* Utilization of emerging web technologies, Jade, LESS and Stylus (possibly).
+* Utilization of emerging web technologies: Jade, LESS and Stylus (possibly).
+* Author designs from the ground up to include MySource code blocks, a build step will determin whether these are compiled or not.
 
 **Testing:**
 
@@ -25,10 +26,10 @@ None. DOH!
 
 **Deployment:**
 
-* Various build options for deployment eg. build to archive, build static components.
+* Various build options for deployment eg. build static, build parse, build nested, build archive, etc.
 
 **TODO:**
 
 * Write mixins for MySource specific code blocks (eg. MySource_Area, MySource_Asset, etc).
 * Write mixins for MySource specific tags (eg. MySource_Print, MySource_Set, MySource_Declare, etc).
-* Work out how to in-line tags as values to attributes in Jade (eg. <a href="<MySource_PRINT var="asset_link"/>">)
+* Work out how to in-line tags as values to attributes using Jade (eg. <a href="<MySource_PRINT var="asset_link"/>">)
