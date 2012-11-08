@@ -38,7 +38,7 @@ None. DOH!
 **Syntax Example:**
 
 Old:
-`
+```html
 <MySource_AREA id_name="Section_menu" design_area="menu_normal">
   <MySource_SET name="level" value="sub"/>
   <MySource_SET name="show_subs" value="always"/>
@@ -56,10 +56,10 @@ Old:
   </MySource_ASSET>
   </ul>
 </MySource_AREA>
-`
+```
 
 New:
-`
+```jade
 +area(id_name='Section_menu', design_area='menu_normal')
   +set(name='level', value='sub')
   +set(name='show_subs', value='always')
@@ -70,4 +70,4 @@ New:
       ul
       +asset
         li: +print(var='asset_name_linked')
-`
+```
