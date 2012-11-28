@@ -1,0 +1,13 @@
+include ../mixins/design
++area#main_menu(design_area='menu_normal')
+  +set(name='level', value='sub')
+  +set(name='show_subs', value='always')
+  ul#global_nav
+    +asset
+      li
+        +print(var='asset_name_linked')
+        +sub
+          ul
+            +asset
+              li
+                +print(var='asset_name_linked')

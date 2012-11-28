@@ -10,7 +10,7 @@ This projects aim is to streamline some of the processes that go into working wi
 
 * Easy project initialization. (H5BP or Bootstrap we've got you covered)
 * Streamlined authoring of Matrix design parse files.
-* Concise syntax for MySource specific code blocks.
+* Concise syntax for MySource specific code blocks (see example below).
 * Utilization of emerging web technologies: Jade, LESS and Stylus (possibly).
 * Author designs from the ground up to include MySource code blocks, a build step will determin whether these are compiled or not.
 
@@ -36,10 +36,10 @@ This projects aim is to streamline some of the processes that go into working wi
 
 New:
 ```jade
-+area(id_name='Section_menu', design_area='menu_normal')
++area#main_menu(design_area='menu_normal')
   +set(name='level', value='sub')
   +set(name='show_subs', value='always')
-  ul
+  ul#global_nav
     +asset
       li
         +print(var='asset_name_linked')
@@ -52,10 +52,10 @@ New:
 
 Old:
 ```html
-<MySource_AREA id_name="Section_menu" design_area="menu_normal">
+<MySource_AREA id_name="main_menu" design_area="menu_normal">
   <MySource_SET name="level" value="sub"/>
   <MySource_SET name="show_subs" value="always"/>
-  <ul>
+  <ul id="global_nav">
     <MySource_ASSET>
       <li>
         <MySource_PRINT var="asset_name_linked"/>
