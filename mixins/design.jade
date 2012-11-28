@@ -1,6 +1,17 @@
 mixin area(attributes)
-  MySource_AREA(attributes)
-    block
+  - var __attributes = {};
+  - each val, key in attributes
+    //- allows the use of standard Jade syntax to define a MySource identifier
+    - if (key === "id")
+      - __attributes["id_name"] = val;
+    - else
+      - __attributes[key] = val;
+  - attributes = __attributes;
+  - if (block)
+    MySource_AREA(attributes)
+      block
+  - else
+    MySource_AREA(attributes)/
 
 mixin asset
   MySource_ASSET(attributes)

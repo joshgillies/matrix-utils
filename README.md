@@ -28,9 +28,9 @@ This projects aim is to streamline some of the processes that go into working wi
 
 * ~~Write mixins for MySource specific code blocks (eg. MySource_Area, MySource_Asset, etc).~~
 * ~~Write mixins for MySource specific tags (eg. MySource_Print, MySource_Set, MySource_Declare, etc).~~
-* MySource_AREAs can be self closing, need to look into making that happen with the `+area` mixin.
+* ~~MySource_AREAs can be self closing, need to look into making that happen with the `+area` mixin.~~
 * Write tests for above.
-* Work out how to in-line tags as values to attributes using Jade (eg. <a href="<MySource_PRINT var="asset_link"/>">)
+* Work out how to in-line tags as values to attributes using Jade (eg. `<a href="<MySource_PRINT var="asset_link"/>">`)
 
 **Syntax Example:**
 
