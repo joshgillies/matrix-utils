@@ -1,16 +1,33 @@
-mixin area(attributes)
+//- It works, but feels *so* wrong!
+//- Looking to merge this into an external helpers.js
+//- to be passed into the Jade compiler.
+- var ocd = function(attributes) {
   - var __attributes = {};
-  - each val, key in attributes
+  each val, key in attributes
     //- allows the use of standard Jade syntax to define a MySource identifier
-    - if (key === "id")
+    if key === "id"
       - __attributes["id_name"] = val;
-    - else
+    else
       - __attributes[key] = val;
-  - attributes = __attributes;
-  - if (block)
-    MySource_AREA(attributes)
-      block
-  - else
+  - return __attributes;
+- }
+
+//- Below used in conjunction with the parser function to
+//- fudge design static/parse file functionality.
+mixin block
+  block
+
+mixin area(attributes)
+  - attributes = ocd(attributes);
+  if block
+    //- this could be merged into above if statement. via || or &&
+    if attributes.design_area === "nest_content"
+      MySource_AREA(attributes)/
+        block
+    else
+      MySource_AREA(attributes)
+        block
+  else
     MySource_AREA(attributes)/
 
 mixin asset
@@ -42,6 +59,7 @@ mixin logout
     block
 
 mixin print(attributes)
+  - attributes = ocd(attributes);
   MySource_PRINT(attributes)/
 
 mixin declare(attributes)
