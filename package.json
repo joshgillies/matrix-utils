@@ -1,0 +1,22 @@
+{
+  "name": "matrix-utils",
+  "version": "0.0.0",
+  "description": "A set of helpers for working with and developing for Squiz Matrix",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joshgillies/matrix-utils.git"
+  },
+  "author": "Josh Gillies <contact@joshgilli.es>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "jade": "~0.27.7"
+  }
+}
