@@ -1,0 +1,29 @@
+include ../mixins/design
++area#exit_area(design_area="exit", print="no")
+//- Currently not implemented, a way of handling nested areas
++area#nested_EES_code(design_area="nest_content", print="no")
+  // Easy Edit CSS
+  link(href="/__data/ees/easyedit.min.css", rel="stylesheet", media="screen")
+  // Squiz Matrix / Easy Edit JS API (replace with correct file path to JS API within web services folder, file path may vary per implementation)
+  // Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation#The-Javascript-API
+  script(src="/_web_services/xxxx.js")
+  // Easy Edit Configuration (replace with correct file path, file path may vary per implementation)
+  // Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation#Constructing-the-Configuration-File
+  script(src="/path/to/eesconfig/xxxx.js")
+  // Easy Edit Core Scripts (path to install directory within data/public/)
+  script(src="/__data/ees/easyedit.min.js")
++area#simple_edit_EES(design_area="show_if")
+  +set(name="condition", value="simple_edit_mode")
+  +then
+    !!! html
+    html(lang="en")
+      head
+        meta(charset="utf-8")
+        // EES install and implementation help: http://manuals.matrix.squizsuite.net/ees/chapters/installation
+        // The title tag is dynamically replaced by EES code, see your EES config.js file to customise
+        // Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation/#Constructing-the-Configuration-File
+        title Loading Easy Edit Suite...
+        // Use a nested standard page (set to raw html) for custom CSS and JS file references. Avoids editing design file.
+        +print#nested_EES_code
+      body
+    +print#exit_area

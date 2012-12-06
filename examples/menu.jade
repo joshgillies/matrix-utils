@@ -6,8 +6,10 @@ include ../mixins/design
     +asset
       li
         +print(var='asset_name_linked')
+          a(href="#") Parent Asset
         +sub
           ul
             +asset
               li
                 +print(var='asset_name_linked')
+                  a(href="#") Child Asset

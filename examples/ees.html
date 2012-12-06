@@ -1,0 +1,21 @@
+
+<MySource_AREA id_name="exit_area" design_area="exit" print="no"/>
+<MySource_AREA id_name="nested_EES_code" design_area="nest_content" print="no"/>
+<MySource_AREA id_name="simple_edit_EES" design_area="show_if">
+  <MySource_SET name="condition" value="simple_edit_mode"/>
+  <MySource_THEN><!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <!-- EES install and implementation help: http://manuals.matrix.squizsuite.net/ees/chapters/installation-->
+        <!-- The title tag is dynamically replaced by EES code, see your EES config.js file to customise-->
+        <!-- Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation/#Constructing-the-Configuration-File-->
+        <title>Loading Easy Edit Suite...</title>
+        <!-- Use a nested standard page (set to raw html) for custom CSS and JS file references. Avoids editing design file.-->
+        <MySource_PRINT id_name="nested_EES_code"/>
+      </head>
+      <body></body>
+    </html>
+    <MySource_PRINT id_name="exit_area"/>
+  </MySource_THEN>
+</MySource_AREA>

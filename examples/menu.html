@@ -1,0 +1,21 @@
+
+<MySource_AREA id_name="main_menu" design_area="menu_normal">
+  <MySource_SET name="level" value="sub"/>
+  <MySource_SET name="show_subs" value="always"/>
+  <ul id="global_nav">
+    <MySource_ASSET>
+      <li>
+        <MySource_PRINT var="asset_name_linked"/>
+        <MySource_SUB design_area="menu_normal">
+          <ul>
+            <MySource_ASSET>
+              <li>
+                <MySource_PRINT var="asset_name_linked"/>
+              </li>
+            </MySource_ASSET>
+          </ul>
+        </MySource_SUB>
+      </li>
+    </MySource_ASSET>
+  </ul>
+</MySource_AREA>
